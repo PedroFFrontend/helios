@@ -7,7 +7,7 @@ import { PayloadAction } from "@reduxjs/toolkit"
 const apiToken = "b5a037f328fb4807866134410230807"
 
 function getEndpoint(q: string) {
-  return `http://api.weatherapi.com/v1/forecast.json?key=${apiToken}&days=5&alerts=yes&aqi=yes&q=${q}`
+  return `https://api.weatherapi.com/v1/forecast.json?key=${apiToken}&days=5&alerts=yes&aqi=yes&q=${q}`
 }
 
 export default function* weatherSaga(): Generator<any, any, any> {
