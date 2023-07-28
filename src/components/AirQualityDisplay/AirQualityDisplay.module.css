@@ -1,0 +1,39 @@
+/** @format */
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  align-self: center;
+  margin-bottom: 3rem;
+  padding: 0 2rem;
+}
+
+.content {
+  overflow-x: auto;
+}
+
+.stat {
+  display: flex;
+  height: 3rem;
+}
+
+.stat:nth-child(even) {
+  background-color: #111;
+}
+.stat:nth-child(odd) {
+  background-color: #222;
+}
+.stat:nth-child(1) {
+  background-color: initial;
+}
+
+.stat > * {
+  min-width: 20ch;
+  width: 20ch;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}

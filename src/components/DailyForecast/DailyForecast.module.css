@@ -1,0 +1,54 @@
+/** @format */
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  margin-top: 3rem;
+  padding: 2rem;
+}
+
+.entry {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.weekday {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.temperature > * {
+  width: 2rem;
+}
+
+.temperature > *:nth-child(1) {
+  font-weight: bold;
+}
+
+.condition {
+  color: gray;
+}
+
+@media (width < 850px) {
+  .container {
+    flex-direction: column;
+  }
+  .entry {
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
+  }
+  .entry > *:nth-child(2) {
+    text-align: right;
+  }
+  .temperature {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,119 @@
+/** @format */
+
+.container {
+  overflow: hidden;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  --c0a: #4597ffff;
+  --c0b: #3bcfffff;
+  --c1a: #68cddcff;
+  --c1b: #56a6e4ff;
+  --c2b: #f4e3b0ff;
+  --c2a: #68cddcff;
+  --c3b: #f7d277ff;
+  --c3a: #8dcfe1ff;
+  --c4b: #f49437ff;
+  --c4a: #c1f9f2ff;
+  --c5b: #f36c1bff;
+  --c5a: #fff2b2ff;
+  --c6b: #e45666ff;
+  --c6a: #ffa47cff;
+  --c7b: #963a47ff;
+  --c7a: #f46060ff;
+  --c8b: #932754ff;
+  --c8a: #864458ff;
+  --c9b: #292934ff;
+  --c9a: #945979ff;
+  --c10b: #1e1f24ff;
+  --c10a: #424056ff;
+  --c11b: #0e0e0eff;
+  --c11a: #1b1b1fff;
+
+  background: linear-gradient(
+    to bottom,
+    #3bcfff,
+    #68cddc,
+    #56a6e4,
+    #4597ff,
+    #8dcfe1,
+    #c1f9f2,
+    #fff2b2,
+    #f4e3b0,
+    #f7d277,
+    #ecb691,
+    #f49437,
+    #ffa47c,
+    #f46060,
+    #e45666,
+    #932754,
+    #963a47,
+    #864458,
+    #945979,
+    #424056,
+    #292934,
+    #1e1f24,
+    #1b1b1f,
+    #0e0e0e
+  );
+  background-size: 10px 700vh;
+  /* background-position-y: ; */
+  /* background: linear-gradient(to top, #282931, #a14c56); */
+  /* background: linear-gradient(to top, #1e1f24, #5e383d); */
+  /* background: linear-gradient(to top, #131314, #41333b); */
+  /* background: linear-gradient(to top, #000000, #120f1d); */
+  /* background: linear-gradient(to top, #020202, #14121b); */
+
+  animation: daynight 1s linear infinite step-end;
+  background: none;
+}
+
+@keyframes daynight {
+  from {
+    background-position-y: 0;
+  }
+  to {
+    background-position-y: -600vh;
+  }
+}
+
+.temporary {
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  background-color: black;
+  opacity: 0.1;
+}
+
+.ground {
+  position: absolute;
+  bottom: 1rem;
+  left: -1rem;
+  right: -1rem;
+}
+
+.sun {
+  position: absolute;
+  inset: 20vh;
+  height: 10vw;
+  top: 75%;
+}
+
+.moon {
+  position: absolute;
+  inset: 55vh;
+  height: 4vw;
+  top: 75%;
+  opacity: 0.25;
+  /* background-color: lime; */
+}
+
+@keyframes sun {
+  from {
+    rotate: 0;
+  }
+  to {
+    rotate: 90deg;
+  }
+}

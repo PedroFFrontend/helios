@@ -1,0 +1,59 @@
+/** @format */
+
+.container {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.made_by {
+  background-color: #111;
+  color: white;
+  border: 1px dashed #333;
+  padding: 1rem 1.6rem;
+  position: relative;
+  /* color: orangered; */
+  /* text-shadow: 0 0 5px orangered; */
+
+  transition: color 0.1s ease-out, text-shadow 0.1s ease-out;
+}
+
+.made_by > * {
+  background-color: orangered;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  box-shadow: 0 0 5px 1px orangered;
+
+  transition: background-color 0.1s ease-out, box-shadow 0.1s ease-out;
+}
+
+.made_by > *:nth-child(1) {
+  top: -1px;
+  left: -1px;
+}
+
+.made_by > *:nth-child(2) {
+  bottom: -1px;
+  left: -1px;
+}
+
+.made_by > *:nth-child(3) {
+  top: -1px;
+  right: -1px;
+}
+
+.made_by > *:nth-child(4) {
+  bottom: -1px;
+  right: -1px;
+}
+
+.made_by:hover {
+  /* color: cyan; */
+  /* text-shadow: 0 0 5px cyan; */
+}
+
+.made_by:hover > * {
+  background-color: cyan;
+  box-shadow: 0 0 5px 1px cyan;
+}

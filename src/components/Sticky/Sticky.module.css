@@ -1,0 +1,54 @@
+/** @format */
+
+.container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0%;
+  background-color: #000;
+  border-bottom: 1px solid #333;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  height: 55px;
+}
+
+.footer_left {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+
+  font-size: 1rem;
+}
+
+.footer_left button {
+  padding: 0.25rem 1rem;
+}
+
+.location_name {
+  font-size: 1.5rem;
+  font-weight: 200;
+  margin-right: 1rem;
+}
+.localtime {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.fetch_button {
+  background-color: transparent;
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.fetch_button:hover {
+  background-color: #222;
+}
+
+@media (width < 850px) {
+  .localtime {
+    display: none;
+  }
+}

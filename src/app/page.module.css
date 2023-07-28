@@ -1,0 +1,51 @@
+/** @format */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  /* padding: 6rem; */
+  min-height: 100vh;
+  /* background-color: #111; */
+}
+
+.below {
+  padding: 1rem 10vw;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.below h2 {
+  margin-top: 2rem;
+}
+
+.fetch_button {
+  padding: 1rem 2rem;
+  font-size: inherit;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+}
+
+@media (prefers-reduced-motion) {
+}
+
+@media (width < 850px) {
+  .below {
+    padding: 1rem 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+}
+
+@media (prefers-color-scheme: dark) {
+}
