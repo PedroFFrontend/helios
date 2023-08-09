@@ -1,5 +1,4 @@
 /** @format */
-
 import { configureStore } from "@reduxjs/toolkit"
 import weatherSlice from "./weather/weatherSlice"
 import createSagaMiddleware from "redux-saga"

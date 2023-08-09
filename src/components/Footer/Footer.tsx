@@ -6,13 +6,13 @@ import Link from "next/link"
 export default function Footer() {
   return (
     <footer className={styles.container}>
-      <Link className={styles.made_by} href="/">
+      {/* <Link className={styles.made_by} href="/">
         Made by Pedro Ferreira
         <div />
         <div />
         <div />
         <div />
-      </Link>
+      </Link> */}
     </footer>
   )
 }

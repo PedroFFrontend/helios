@@ -35,34 +35,34 @@ export default function AirQualityDisplay() {
         <div className={styles.stat} title="Carbon Monoxide">
           <div>CO (μg/m3)</div>
           {/* <div>{current ? `${current.air_quality.co ? current.air_quality.co.toLocaleString() : "-"}` : ""}</div> */}
-          {forecast && forecast.forecastday.map((d, i) => <div key={i}> {d.day.air_quality.co ? d.day.air_quality.co.toLocaleString() : "-"}</div>)}
+          {forecast && forecast.forecastday.map((d, i) => <div key={i}> {d.day.air_quality && d.day.air_quality.co ? d.day.air_quality.co.toLocaleString() : "-"}</div>)}
         </div>
         <div className={styles.stat} title="Nitrogen Dioxide">
           <div>NO2 (μg/m3)</div>
           {/* <div>{current ? `${current.air_quality.no2 ? current.air_quality.no2.toLocaleString() : "-"}` : ""}</div> */}
-          {forecast && forecast.forecastday.map((d, i) => <div key={i}> {d.day.air_quality.no2 ? d.day.air_quality.no2.toLocaleString() : "-"}</div>)}
+          {forecast && forecast.forecastday.map((d, i) => <div key={i}> {d.day.air_quality && d.day.air_quality.no2 ? d.day.air_quality.no2.toLocaleString() : "-"}</div>)}
         </div>
         <div className={styles.stat} title="Ozone">
           <div>O3 (μg/m3)</div>
           {/* <div>{current ? `${current.air_quality.o3 ? current.air_quality.o3.toLocaleString() : "-"}` : ""}</div> */}
-          {forecast && forecast.forecastday.map((d, i) => <div key={i}> {d.day.air_quality.o3 ? d.day.air_quality.o3.toLocaleString() : "-"}</div>)}
+          {forecast && forecast.forecastday.map((d, i) => <div key={i}> {d.day.air_quality && d.day.air_quality.o3 ? d.day.air_quality.o3.toLocaleString() : "-"}</div>)}
         </div>
         <div className={styles.stat} title="Sulfur Dioxide">
           <div>SO2 (μg/m3)</div>
           {/* <div>{current ? `${current.air_quality.so2 ? current.air_quality.so2.toLocaleString() : "-"}` : ""}</div> */}
-          {forecast && forecast.forecastday.map((d, i) => <div key={i}> {d.day.air_quality.so2 ? d.day.air_quality.so2.toLocaleString() : "-"}</div>)}
+          {forecast && forecast.forecastday.map((d, i) => <div key={i}> {d.day.air_quality && d.day.air_quality.so2 ? d.day.air_quality.so2.toLocaleString() : "-"}</div>)}
         </div>
         <div className={styles.stat} title="Particulate matter smaller than 2.5μm">
           <div>PM2.5 (μg/m3)</div>
           {/* <div>{current && current.air_quality.pm2_5 ? `${current.air_quality.pm2_5.toLocaleString()}` : ""}</div> */}
           {forecast &&
-            forecast.forecastday.map((d, i) => <div key={i}> {d.day.air_quality.pm2_5 ? d.day.air_quality.pm2_5.toLocaleString() : "-"}</div>)}
+            forecast.forecastday.map((d, i) => <div key={i}> {d.day.air_quality && d.day.air_quality.pm2_5 ? d.day.air_quality.pm2_5.toLocaleString() : "-"}</div>)}
         </div>
         <div className={styles.stat} title="Particulate matter smaller than 10μm">
           <div>PM10 (μg/m3)</div>
           {/* <div>{current && current.air_quality.pm10 ? `${current.air_quality.pm10.toLocaleString()}` : ""}</div> */}
           {forecast &&
-            forecast.forecastday.map((d, i) => <div key={i}> {d.day.air_quality.pm10 ? d.day.air_quality.pm10.toLocaleString() : "-"}</div>)}
+            forecast.forecastday.map((d, i) => <div key={i}> {d.day.air_quality && d.day.air_quality.pm10 ? d.day.air_quality.pm10.toLocaleString() : "-"}</div>)}
         </div>
         <div className={styles.stat} title="UK DEFRA Index">
           <div>DEFRA Index</div>
@@ -71,7 +71,7 @@ export default function AirQualityDisplay() {
           {forecast
             ? forecast.forecastday.map((d, i) => (
                 <div key={i}>
-                  {d.day.air_quality["gb-defra-index"] !== undefined ? ukDefraIndexNames[d.day.air_quality["gb-defra-index"] - 1] : "-"}
+                  {d.day.air_quality && d.day.air_quality["gb-defra-index"] !== undefined ? ukDefraIndexNames[d.day.air_quality["gb-defra-index"] - 1] : "-"}
                 </div>
               ))
             : ""}
@@ -82,10 +82,10 @@ export default function AirQualityDisplay() {
 
           {forecast
             ? forecast.forecastday.map((d, i) => (
-                <div key={i}> {d.day.air_quality["us-epa-index"] !== undefined ? usEpaIndexNames[d.day.air_quality["us-epa-index"] - 1] : "-"}</div>
+                <div key={i}> {d.day.air_quality && d.day.air_quality["us-epa-index"] !== undefined ? usEpaIndexNames[d.day.air_quality["us-epa-index"] - 1] : "-"}</div>
               ))
             : ""}
-        </div>{" "}
+        </div>
       </div>
     </div>
   )
